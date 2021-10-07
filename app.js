@@ -17,10 +17,11 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(passport.initialize());
 const corsOptions ={
-    origin:'*', 
+    origin:'https://social-network-pmt317.vercel.app', 
     credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200,
+    optionSuccessStatus:200
 }
+app.use(cors(corsOptions));
  
  app.use(cors(corsOptions))
 
